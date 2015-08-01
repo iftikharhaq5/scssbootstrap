@@ -1,0 +1,25 @@
+{
+  "name": "scssbootstrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iftikharhaq5/scssbootstrap.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iftikharhaq5/scssbootstrap/issues"
+  },
+  "homepage": "https://github.com/iftikharhaq5/scssbootstrap#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-bower": "0.0.10",
+    "gulp-sass": "^2.0.4"
+  }
+}

@@ -1,0 +1,5 @@
+jQuery tutorilal
+https://learn.jquery.com/using-jquery-core/
+
+revert git changes
+https://www.atgit lassian.com/git/tutorials/undoing-changes

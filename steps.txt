@@ -1,0 +1,63 @@
+http://treyhunner.com/2015/02/creating-a-custom-bootstrap-build/
+
+
+1)on cmd type
+npm init -y
+
+2)on cmd ..
+npm install --save-dev gulp gulp-bower gulp-sass
+
+3)on cmd ...
+bower init
+
+
+4)in root folder make css/app.scss and
+open this file and type
+
+@import "bootstrap";
+@import "bootstrap/theme";
+
+5)in root folder
+make gulpfile.js
+and in this file type
+
+/*--------------*/
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+
+var config = {
+    bootstrapDir: './bower_components/bootstrap-sass',
+    publicDir: './public',
+};
+
+gulp.task('css', function() {
+    return gulp.src('./css/app.scss')
+    .pipe(sass({
+        includePaths: [config.bootstrapDir + '/assets/stylesheets'],
+    }))
+    .pipe(gulp.dest(config.publicDir + '/css'));
+});
+
+gulp.task('fonts', function() {
+    return gulp.src(config.bootstrapDir + '/assets/fonts/**/*')
+    .pipe(gulp.dest(config.publicDir + '/fonts'));
+});
+
+gulp.task('default', ['css', 'fonts']);
+
+
+6) on terminal type
+gulp
+
+this will make in root folder
+public/css/app.css
+public/fonts/..........
+
+7)in root folder make
+index.html
+    <link rel="stylesheet" href="public/css/app.css"/>
+
+
+8)link the app.css
+9)make script tag in index.html
+    <script type="application/javascript" src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
